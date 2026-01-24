@@ -1,95 +1,147 @@
 # Quill
 
-A modern web application that enables you to have interactive conversations with your PDF documents. Upload a PDF, ask questions, and get intelligent responses based on the document's content.
+## Overview
 
-## Features
+Quill is a sophisticated conversational AI application designed to facilitate intelligent document analysis and interaction. The platform enables users to upload PDF documents and engage in natural language conversations with their content, leveraging advanced AI models to extract, interpret, and respond to document-specific queries.
 
-- 📄 **PDF Upload** - Easily upload PDF documents to the application
-- 💬 **Interactive Chat** - Ask questions and get answers based on PDF content
-- 🤖 **AI-Powered** - Intelligent responses using advanced language models
-- ⚡ **Fast Processing** - Quick document analysis and response generation
-- 🎨 **User-Friendly Interface** - Clean and intuitive design
-- 📱 **Responsive Design** - Works seamlessly on desktop and mobile devices
+## Core Capabilities
 
-## Tech Stack
+- **Document Processing** - Seamless PDF file upload and indexing
+- **Conversational Interface** - Natural language chat interface for document interaction
+- **Intelligent Responses** - AI-powered analysis and contextual answer generation
+- **Performance Optimization** - Efficient document parsing and response delivery
+- **Responsive Architecture** - Cross-platform compatibility and adaptive user interface
+- **Enterprise-Grade Design** - Professional and intuitive user experience
 
-- **Framework**: [Next.js](https://nextjs.org/) - React framework for production
-- **Language**: TypeScript - Type-safe JavaScript
-- **Styling**: CSS - Global styling for consistent design
-- **Package Manager**: pnpm - Fast, disk space efficient package manager
+## Technology Stack
 
-## Getting Started
+| Component | Technology | Purpose |
+|-----------|-----------|---------|
+| Framework | [Next.js](https://nextjs.org/) 15+ | Production-ready React framework with server-side rendering |
+| Language | TypeScript | Type-safe application development |
+| Styling | CSS3 | Modern, maintainable styling |
+| Package Manager | pnpm | Efficient dependency management |
+| Configuration | ESLint | Code quality and consistency standards |
 
-### Prerequisites
+## Prerequisites
 
-- Node.js (v18 or higher)
-- pnpm (or npm/yarn)
+- Node.js v18 or higher
+- pnpm v8.0 or higher (alternative: npm or yarn)
+- 500MB available disk space
 
-### Installation
+## Installation & Setup
 
-1. Clone the repository:
+### Clone Repository
+
 ```bash
 git clone <repository-url>
 cd quill
 ```
 
-2. Install dependencies:
+### Install Dependencies
+
 ```bash
 pnpm install
 ```
 
-3. Run the development server:
+### Development Environment
+
 ```bash
 pnpm dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+Access the application at [http://localhost:3000](http://localhost:3000)
 
-## Project Structure
+### Production Build
+
+```bash
+pnpm build
+pnpm start
+```
+
+## Project Architecture
 
 ```
 quill/
-├── app/
-│   ├── globals.css          # Global styles
+├── app/                     # Next.js application directory
+│   ├── globals.css          # Global stylesheet definitions
 │   ├── layout.tsx           # Root layout component
-│   └── page.tsx             # Home page
-├── public/                  # Static assets
-├── package.json             # Project dependencies
+│   └── page.tsx             # Homepage entry point
+├── public/                  # Static assets and resources
+├── eslint.config.mjs        # ESLint configuration
 ├── next.config.ts           # Next.js configuration
-├── tsconfig.json            # TypeScript configuration
-└── README.md                # This file
+├── tsconfig.json            # TypeScript compiler options
+├── package.json             # Project metadata and dependencies
+├── pnpm-workspace.yaml      # Workspace configuration
+└── README.md                # Documentation
 ```
 
-## Available Scripts
+## Available Commands
 
-- `pnpm dev` - Start the development server
-- `pnpm build` - Build for production
-- `pnpm start` - Start the production server
-- `pnpm lint` - Run ESLint
+| Command | Purpose |
+|---------|---------|
+| `pnpm dev` | Start development server with hot reload |
+| `pnpm build` | Create optimized production build |
+| `pnpm start` | Run production server |
+| `pnpm lint` | Execute code quality analysis |
 
-## How to Use
+## Usage Instructions
 
-1. **Upload a PDF** - Click the upload button and select your PDF file
-2. **Ask Questions** - Type your question in the chat interface
-3. **Get Answers** - The AI will analyze the PDF and provide relevant answers
-4. **Continue Chatting** - Ask follow-up questions for more details
+### Document Upload
+1. Navigate to the application interface
+2. Select the "Upload PDF" option
+3. Choose your desired PDF file
 
-## Environment Variables
+### Query Interaction
+1. Enter your question in the chat interface
+2. Submit query for document analysis
+3. Review AI-generated response
+4. Ask follow-up questions as needed
 
-Create a `.env.local` file in the root directory with necessary environment variables. (Configuration details to be added)
+## Configuration
+
+### Environment Variables
+
+Create `.env.local` in the project root directory:
+
+```env
+# Configuration details to be added during implementation
+NEXT_PUBLIC_API_URL=
+API_KEY=
+```
+
+Refer to `.env.example` for complete configuration options.
+
+## Development Guidelines
+
+- Maintain TypeScript strict mode compliance
+- Follow ESLint configuration standards
+- Test changes thoroughly before deployment
+- Document complex functions and components
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+We welcome contributions from the development community. Please submit pull requests with:
+
+- Clear description of changes
+- Updated documentation
+- Test coverage for new features
+- Adherence to existing code standards
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License. See the LICENSE file for complete terms.
 
-## Support
+## Support & Issues
 
-For issues or questions, please open an issue in the repository.
+For technical support or issue reporting, please create an issue in the project repository with:
+- Detailed problem description
+- Steps to reproduce
+- Environment information (OS, Node version, etc.)
 
----
+## Changelog
 
-**Built with ❤️ using Next.js and TypeScript**
+### Version 1.0.0
+- Initial release with core PDF chat functionality
+- Implementation of conversational interface
+- Document processing pipeline
