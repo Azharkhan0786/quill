@@ -1,10 +1,29 @@
 'use client'
 
+import { trpc } from '@/app/_trpc/client'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { httpBatchLink } from '@trpc/client'
+import { PropsWithChildren, useState } from 'react'
 
+const Providers = ({ children }: PropsWithChildren) => {
+  const [queryClient] = useState(() => new QueryClient())
 
-const Providers = () => {
+  const [trpcClient] = useState(() =>
+    trpc.createClient({
+      links: [
+        httpBatchLink({
+          url: '/api/trpc', 
+        }),
+      ],
+    })
+  )
+
   return (
-    <div>Providers</div>
+    <QueryClientProvider client={queryClient}>
+      <trpc.Provider client={trpcClient} queryClient={queryClient}>
+        {children}
+      </trpc.Provider>
+    </QueryClientProvider>
   )
 }
 
